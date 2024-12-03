@@ -26,7 +26,7 @@ export const routes: Routes = [
         //Indicates that this route is the default route that will be loaded when no other route matches.
         //If the URL is just http://localhost:4200/, it redirects to the signin route.
         component: AuthLayoutComponent,
-        //canActivate: [isLoggedInGuard],
+        canActivate: [isLoggedInGuard],
 
         children: [
             { path: '', redirectTo: 'signin', pathMatch: 'full' }, 
@@ -41,7 +41,7 @@ export const routes: Routes = [
         //path: 'main', component: MainLayoutComponent,
         path: '',
         component: MainLayoutComponent,
-        //canActivate: [authGuard],
+        canActivate: [authGuard],
         //Defines an array of guards that must pass before the route can be activated.
         //The <MainLayoutComponent> will be loaded for this route, but only if the <authGuard> returns true.
 
