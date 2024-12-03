@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel'; 
+//Imports the main stylesheet for the <ngx-owl-carousel-o> library.
+//It contains the base styles for the carousel component, such as its overall layout, structure, and default appearance.
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+//Imports the default theme stylesheet for the <ngx-owl-carousel-o> library. 
+//It contains the specific styling for the carousel's navigation dots, navigation arrows, and other elements, based on the default theme.
+@import 'ngx-toastr/toastr';
+//Imports the default theme stylesheet for the <ngx-toastr> library. 
+//It applies the styles defined by the library to the toast notifications that it creates.
+
+:root {
+    --main-color: #0aad0a;
+    --light-color: #f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px, rgba(145,158,171,.14) 0px 4px 5px 0px;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+    --rating-color: #ffc908;
+}
+
+body {
+    font-family: var(--font-family) !important;
+}
+
+.rating-color {
+    color: var(--rating-color);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a, a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.product:hover {
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.category, .brand {
+    box-shadow: var(--shadow);
+    border: solid 1px var(--light-color);
+    border-radius: 10px;
+}
+
+.category:hover, .brand:hover {
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.product .btn {
+    transition: transform 1s, opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.product:hover .btn {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.font-sm {
+    font-size: 14px;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.navbar-active {
+    background-color: var(--main-color) !important;
+    color: #fff !important;
+    border-radius: 8px;
+}
+
+.bg-main-light {
+    background-color: var(--light-color) !important;
+}
+
+.main-border {
+    border: 1px solid var(--main-color);
+}
+
+.topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0aad0a;
+    color:#fff;
+    z-index: 99;
+}
+
+.topBtn:hover {
+    background-color: #0aad0aa9;
+    color:#fff;
+}
+
+//Selector targets the scrollbar itself
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+//Selector targets the draggable thumb part of the scrollbar
+::-webkit-scrollbar-thumb {
+    background-color: #0aad0a;
+    border-radius: 20px;
+}
+
+//Selector targets the track of the scrollbar, which is the area behind the thumb
+::-webkit-scrollbar-track {
+    background-color: #f0f3f2;
+}
