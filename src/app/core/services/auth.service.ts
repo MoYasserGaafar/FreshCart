@@ -32,9 +32,11 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem('userToken');
-    localStorage.removeItem('userData');
+    // Remove the <token> and <data> keys from local storage, effectively clearing the user's session.
+    localStorage.removeItem('token');
+    localStorage.removeItem('data');
     this._Router.navigate(["/signin"])
+    //Navigate the user to the sign-in page
   }
 
   saveUserData = () => {
